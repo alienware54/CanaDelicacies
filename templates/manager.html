@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Registration</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+</head>
+<body>
+
+<section class="vh-100" style="background-color: #f8f9fa;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-10 col-lg-8">
+        <div class="card shadow-sm" style="border-radius: 15px;">
+          <div class="card-body p-4">
+            <div class="row">
+              <!-- Form Section -->
+              <div class="col-md-6">
+                <h3 class="text-center fw-bold mb-4">Create Admin Account</h3>
+                <form method="POST" >
+                  {% csrf_token %}
+
+                  <!-- Username Input -->
+                  <div class="form-outline mb-3">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="Enter your username" required />
+                  </div>
+
+                  <!-- Name Input -->
+                  <div class="form-outline mb-3">
+                    <label class="form-label" for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control form-control-lg" placeholder="Enter your name" required />
+                  </div>
+
+                  <!-- Password Input -->
+                  <div class="form-outline mb-3">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Enter your password" required />
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-warning btn-lg">Register</button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Image Section -->
+              <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <img src="{% static 'assets/img/background image events.jpg' %}" alt="Admin Image" class="img-fluid rounded" style="max-height: 300px; border-radius: 15px;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

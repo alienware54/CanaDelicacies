@@ -1,0 +1,57 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %} <br><br><br><br><br>
+
+
+<!-- About Section -->
+<section id="about" class="about section light-background">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+        <img src="{% static 'assets/img/all about cana.jpg' %}" class="img-fluid about-img" alt="">
+      </div>
+      <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+        <h3>Our Story</h3>
+        <p class="fst-italic">
+        Welcome to Cana Delicacies, located in the heart of Kapsabet, Kenya. Our story began with a simple dream: to create a place where people could enjoy fresh, delicious meals while feeling right at home. We believe that good food brings people together, and that’s why we pour our hearts into every dish we serve.
+
+At Cana Delicacies, we focus on quality and freshness. Our meals are prepared using locally sourced ingredients to ensure you enjoy the best flavors. Whether it’s a hearty breakfast, a quick lunch, or a special dinner, every bite is made with love and care.
+
+Our mission is to create a warm and welcoming environment for our guests. From the moment you walk through our doors, you are treated like family. Whether you're here for a relaxing meal or to celebrate a special occasion, we strive to make every visit unforgettable.
+
+We are proud to be part of the Kapsabet community and are dedicated to providing excellent service and delicious food. Join us at Cana Delicacies and let us serve you a meal that’s as satisfying as it is memorable.
+
+Cana Delicacies – where good food and great memories meet!
+        </p>
+      </div>
+    </div>
+  </div>
+</section><!-- /About Section -->
+
+<style>
+  /* Style for the image in the About Section */
+  .about-img {
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+
+  /* Hover effect for the image */
+  .about-img:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

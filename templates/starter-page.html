@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cana delicacies </title>
+  {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/cana favicon.jpg' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="starter-page-page">
+
+  <!-- Header -->
+<header id="header" class="header fixed-top" style="background-color: #333; color: #fff;">
+
+  <!-- Top Bar -->
+  <div class="topbar d-flex align-items-center" style="background-color: #444;">
+    <div class="container d-flex justify-content-end justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-phone d-flex align-items-center d-none d-lg-block" style="color: #fff;">
+          <span>+254723415680</span>
+        </i>
+        <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center" style="color: #ddd;">
+          <span>Mon-Sat: 8AM - 10PM</span>
+        </i>
+      </div>
+      <a href="{% url 'reservations' %}" class="cta-btn link-effect" style="color: #fff; background-color: #ff9900; padding: 8px 16px; border-radius: 5px;">Plan Your Stay</a>
+    </div>
+  </div>
+
+  <!-- Branding and Navigation -->
+  <div class="branding d-flex align-items-center">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename" style="color: #fff;">Flavors from nature</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 15px;">
+          <li><a href="{% url 'index' %}" class="nav-link link-effect">Home</a></li>
+          <li><a href="{% url 'about' %}" class="nav-link link-effect">About</a></li>
+          <li><a href="{% url 'menu' %}" class="nav-link link-effect">Menu</a></li>
+          <li><a href="{% url 'specials' %}" class="nav-link link-effect">Specials</a></li>
+          <li><a href="{% url 'events' %}" class="nav-link link-effect">Events</a></li>
+            <li><a href="{% url 'image' %}">Our Chefs</a></li>
+          <li><a href="{% url 'rooms' %}" class="nav-link link-effect">Rooms</a></li>
+          <li><a href="{% url 'gallery' %}" class="nav-link link-effect">Gallery</a></li>
+          <li><a href="{% url 'contact' %}" class="nav-link link-effect">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list" style="color: #fff;"></i>
+      </nav>
+    </div>
+  </div>
+
+</header>
+
+
+
+  <!-- Main Content -->
+  <main class="main">
+    {% block body %}
+    {% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background" style="background-color: #222; color: #fff; padding: 20px;">
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div class="address">
+            <h4>Address</h4>
+            <p>Kapsabet,barnge'tuny Drive(Behind Easy Coach Offices),Saints Towers</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contact</h4>
+            <p><strong>Phone:</strong> +254723415680<br><strong>Email:</strong> canadelicacies@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p><strong>Mon-Sat:</strong>8AM - 10PM<br><strong>Sunday:</strong> Closed</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="https://web.facebook.com/p/CANA-Delicacies-100083598761580/?_rdc=1&_rdr" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center mt-4">
+      <p>&copy; Cana Delicacies. All Rights Reserved</p>
+      <p> <a href="https://web.facebook.com/p/CANA-Delicacies-100083598761580/?_rdc=1&_rdr" style="color: #fff;">Cana Delicacies @ 2024</a></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

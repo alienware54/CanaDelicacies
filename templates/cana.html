@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+</head>
+<body>
+
+<section class="vh-100" style="background-color: #f8f9fa;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-8 col-lg-7">
+        <div class="card shadow-sm" style="border-radius: 15px;">
+          <div class="card-body p-4">
+            <div class="row">
+              <!-- Form Section -->
+              <div class="col-md-6">
+                <h3 class="text-center fw-bold mb-4">Admin Login</h3>
+                <form method="POST" >
+                  {% csrf_token %}
+
+                  <!-- Username Input -->
+                  <div class="form-outline mb-3">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" id="username" name="username" class="form-control form-control-lg" placeholder="Enter your username" required />
+                  </div>
+
+                  <!-- Password Input -->
+                  <div class="form-outline mb-3">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Enter your password" required />
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-warning btn-lg">Login</button>
+                  </div>
+
+                  <!-- Optional Links -->
+                  <div class="mt-4 text-center">
+                    <a href="#!" class="text-muted">Forgot password?</a>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Image Section -->
+              <div class="col-md-6 d-flex align-items-center">
+                <img src="{% static 'assets/img/background image events.jpg' %}" alt="Admin Login" class="img-fluid rounded" style="border-radius: 15px;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

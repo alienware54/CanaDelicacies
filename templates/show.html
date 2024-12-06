@@ -1,0 +1,43 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}<br><br><br><br><br>
+    <div class="container my-4">
+    <!-- Heading with Yellow Highlight -->
+    <h2 class="text-center text-warning bg-yellow py-2 rounded">Guest Room Reservations</h2>
+
+    <!-- Table -->
+    <table class="table table-bordered table-striped table-hover mt-3">
+        <thead class="thead-warning">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Datetime</th>
+                <th>Room type</th>
+                <th>Message</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in reservation %}
+                <tr>
+                    <td>{{ x.name }}</td>
+                    <td>{{ x.email }}</td>
+                    <td>{{ x.phone }}</td>
+                    <td>{{ x.date }}</td>
+                    <td>{{ x.room }}</td>
+                    <td>{{ x.message }}</td>
+                    <td>
+                        <a href="/edit /{{ x.id }}" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="/delete/{{ x.id }}" class="btn btn-danger btn-sm">Delete</a>
+                        <a href="{% url 'pay' %}" class="btn btn-success btn-sm">Pay</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+    <br><br><br><br><br><<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+{% endblock %}

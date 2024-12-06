@@ -1,0 +1,15 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}<br><br><br><br><br>
+
+ <div class="container d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+  <div class="thank-you-card text-center p-4 bg-white shadow rounded">
+    <h1 class="mb-3" style="color: #FFD700;">Thank You for Contacting Us! 😊</h1>
+    <p>We’ve received your message and will get back to you as soon as possible. We appreciate you reaching out to Cana Delicacies!</p>
+    <!-- Button to go back to the contact form or homepage -->
+    <a href="{% url 'index' %}" class="btn btn-warning rounded-pill mt-3">Return to Home</a>
+  </div>
+</div>
+
+
+{% endblock %}

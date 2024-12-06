@@ -1,0 +1,149 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}<br><br><br><br><br>
+
+
+    <!-- Events Section -->
+<section id="events" class="events section">
+
+  <!-- Background image -->
+  <img class="slider-bg" src="{% static 'assets/img/background 3.jpg' %}" alt="Events Background" data-aos="fade-in">
+
+  <div class="container">
+
+    <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+
+        <!-- Event 1: Birthday Parties -->
+        <div class="swiper-slide">
+          <div class="row gy-4 event-item">
+            <div class="col-lg-6 order-lg-1 order-2">
+              <img src="{% static 'assets/img/bithday party.jpeg' %}" class="img-fluid event-img" alt="Birthday Party" data-aos="zoom-in" data-aos-delay="300" style="margin-bottom: 20px; margin-right: 20px;">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-lg-2 order-1 content">
+              <h3>Birthday Parties</h3>
+              <div class="price">
+                <p><span>Ksh. 20,000</span></p>
+              </div>
+              <p class="fst-italic">
+                Celebrate your special day with us! We offer a fun and exciting atmosphere, with delicious food and music.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-circle"></i> Personalized party arrangements.</li>
+                <li><i class="bi bi-check2-circle"></i> Perfect venue for kids and adults.</li>
+                <li><i class="bi bi-check2-circle"></i> Great food, cake, and drinks.</li>
+              </ul>
+              <p>
+                Whether it's a small family gathering or a big party, we provide everything you need for an unforgettable birthday experience.
+              </p>
+            </div>
+          </div>
+        </div><!-- End Slider item -->
+
+        <!-- Event 2: Private Parties -->
+        <div class="swiper-slide">
+          <div class="row gy-4 event-item">
+            <div class="col-lg-6 order-lg-1 order-2">
+              <img src="{% static 'assets/img/private party.jpg' %}" class="img-fluid event-img" alt="Private Party" data-aos="zoom-in" data-aos-delay="300" style="margin-bottom: 20px; margin-right: 20px;">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-lg-2 order-1 content">
+              <h3>Private Parties</h3>
+              <div class="price">
+                <p><span>Ksh. 33,000</span></p>
+              </div>
+              <p class="fst-italic">
+                Hosting a private event? Our venue is perfect for intimate gatherings, with a customized setup just for you.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-circle"></i> Customizable event layout.</li>
+                <li><i class="bi bi-check2-circle"></i> Exclusive atmosphere.</li>
+                <li><i class="bi bi-check2-circle"></i> High-quality service and catering.</li>
+              </ul>
+              <p>
+                Enjoy a private event with all the details tailored to your preferences. From décor to food, we have you covered.
+              </p>
+            </div>
+          </div>
+        </div><!-- End Slider item -->
+
+        <!-- Event 3: Custom Parties -->
+        <div class="swiper-slide">
+          <div class="row gy-4 event-item">
+            <div class="col-lg-6 order-lg-1 order-2">
+              <img src="{% static 'assets/img/custom party.jpg' %}" class="img-fluid event-img" alt="Custom Party" data-aos="zoom-in" data-aos-delay="300" style="margin-bottom: 20px; margin-right: 20px;">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-lg-2 order-1 content">
+              <h3>Custom Parties</h3>
+              <div class="price">
+                <p><span>Ksh. 34,000</span></p>
+              </div>
+              <p class="fst-italic">
+                Have a vision for your perfect event? We will work with you to bring your ideas to life!
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-circle"></i> Tailor-made events to match your theme.</li>
+                <li><i class="bi bi-check2-circle"></i> Full coordination from start to finish.</li>
+                <li><i class="bi bi-check2-circle"></i> Variety of menu options to suit all tastes.</li>
+              </ul>
+              <p>
+                From intimate family dinners to large celebrations, our custom party service ensures that your event is unique and memorable.
+              </p>
+            </div>
+          </div>
+        </div><!-- End Slider item -->
+
+        <!-- Event 4: Weddings -->
+        <div class="swiper-slide">
+          <div class="row gy-4 event-item">
+            <div class="col-lg-6 order-lg-1 order-2">
+              <img src="{% static 'assets/img/weeding.jpg' %}" class="img-fluid event-img" alt="Wedding Event" data-aos="zoom-in" data-aos-delay="300" style="margin-bottom: 20px; margin-right: 20px;">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 order-lg-2 order-1 content">
+              <h3>Weddings</h3>
+              <div class="price">
+                <p><span>KSH. 299,000</span></p>
+              </div>
+              <p class="fst-italic">
+                Your wedding day should be nothing short of magical. Let us create the perfect setting for your big day!
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-circle"></i> Elegant venues designed for your dream wedding.</li>
+                <li><i class="bi bi-check2-circle"></i> Full wedding coordination – from décor to catering.</li>
+                <li><i class="bi bi-check2-circle"></i> Customizable wedding packages to fit your needs.</li>
+              </ul>
+              <p>
+                Our team will help you plan every detail of your wedding. From intimate ceremonies to large receptions, we provide a stress-free experience that allows you to enjoy your special day to the fullest.
+              </p>
+            </div>
+          </div>
+        </div><!-- End Slider item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section><!-- /Events Section -->
+
+
+
+
+
+
+{% endblock %}

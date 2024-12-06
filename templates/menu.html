@@ -1,0 +1,184 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}<br><br>
+
+<!-- Menu Section -->
+    <h1>Menu</h1>
+<ul>
+  {% for item in menu_items %}
+    <li>
+      <strong>{{ item.name }}</strong> ({{ item.category }}) - KSH {{ item.price }}
+      <p>{{ item.description }}</p>
+      {% if item.image %}
+        <img src="{{ item.image.url }}" alt="{{ item.name }}">
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+<section id="menu" class="menu section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <div><span>Taste the Goodness</span> <span class="description-title">Here</span></div>
+  </div><!-- End Section Title -->
+
+  <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul class="menu-filters isotope-filters">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-starters">Starters</li>
+          <li data-filter=".filter-mains">Main Dishes</li>
+          <li data-filter=".filter-grilled">Grilled Delights</li>
+          <li data-filter=".filter-salads">Salads</li>
+          <li data-filter=".filter-desserts">Desserts</li>
+        </ul>
+      </div>
+    </div><!-- Menu Filters -->
+
+    <div class="row isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+      <!-- Starters -->
+      <div class="col-lg-4 menu-item isotope-item filter-starters">
+        <img src="{% static 'assets/img/menu/mandazi.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Mandazi</a><span>100 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          A sweet deep-fried dough pastry, perfect as a snack or breakfast.
+        </div>
+      </div><!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item isotope-item filter-starters">
+        <img src="{% static 'assets/img/menu/samosa.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Samosa</a><span>120 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          Crispy, spiced meat or vegetable-filled pastries, a favorite snack.
+        </div>
+      </div><!-- Menu Item -->
+
+      <!-- Main Dishes -->
+      <div class="col-lg-4 menu-item isotope-item filter-mains">
+        <img src="{% static 'assets/img/menu/ugali  and sukuma.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Ugali & Sukuma</a><span>350 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          A classic Kenyan dish of maize porridge served with sautéed greens.
+        </div>
+      </div><!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item isotope-item filter-mains">
+        <img src="{% static 'assets/img/menu/chicken curry.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Chicken Curry</a><span>700 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          Tender chicken cooked in a rich, spiced curry sauce, served with rice.
+        </div>
+      </div><!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item isotope-item filter-mains">
+        <img src="{% static 'assets/img/menu/nyama choma.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Nyama Choma</a><span>900 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          Grilled meat served with chapati, kachumbari, and a smoky sauce.
+        </div>
+      </div><!-- Menu Item -->
+
+      <!-- Grilled Delights -->
+      <div class="col-lg-4 menu-item isotope-item filter-grilled">
+        <img src="{% static 'assets/img/menu/fried chicken.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Fried Chicken</a><span>800 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          Crispy fried chicken served with fries or Ugali.
+        </div>
+      </div><!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item isotope-item filter-grilled">
+        <img src="{% static 'assets/img/menu/grilled fish.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Grilled Fish</a><span>950 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          Fresh fish grilled to perfection, served with Ugali or rice.
+        </div>
+      </div><!-- Menu Item -->
+
+      <!-- Salads -->
+      <div class="col-lg-4 menu-item isotope-item filter-salads">
+        <img src="{% static 'assets/img/menu/kachumbari.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Kachumbari</a><span>150 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          A refreshing mix of tomatoes, onions, and cilantro, with a hint of chili.
+        </div>
+      </div><!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item isotope-item filter-salads">
+        <img src="{% static 'assets/img/menu/kenyan vegetable salad.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Kenyan Vegetable Salad</a><span>200 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          A mix of lettuce, tomatoes, onions, and cucumber, with a light dressing.
+        </div>
+      </div><!-- Menu Item -->
+
+      <!-- Desserts -->
+      <div class="col-lg-4 menu-item isotope-item filter-desserts">
+        <img src="{% static 'assets/img/menu/maandazi.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Maandazi</a><span>100 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          A Kenyan doughnut-style snack, perfect for any time of day.
+        </div>
+      </div><!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item isotope-item filter-desserts">
+        <img src="{% static 'assets/img/menu/mandazi.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Banana Cake</a><span>250 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          A moist cake made with ripe bananas, perfect for dessert or tea time.
+        </div>
+      </div><!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item isotope-item filter-desserts">
+        <img src="{% static 'assets/img/menu/maize cake.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Maize Cake</a><span>200 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          A traditional Kenyan cake made with maize flour, offering a delightful taste.
+        </div>
+      </div><!-- Menu Item -->
+
+      <div class="col-lg-4 menu-item isotope-item filter-desserts">
+        <img src="{% static 'assets/img/menu/jelly.jpg' %}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">Jelly</a><span>150 KSH</span>
+        </div>
+        <div class="menu-ingredients">
+          Sweet and refreshing fruit-flavored jelly, a favorite Kenyan dessert.
+        </div>
+      </div><!-- Menu Item -->
+
+    </div><!-- Menu Container -->
+
+  </div>
+
+</section><!-- /Menu Section -->
+
+{% endblock %}

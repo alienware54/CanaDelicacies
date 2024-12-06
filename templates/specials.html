@@ -1,0 +1,112 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}<br><br><br><br>
+
+<!-- Specials Section -->
+<section id="specials" class="specials section">
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Today's Kenyan Specials</h2>
+    <div><span>Check Out Our</span> <span class="description-title">Kenyan Dishes</span></div>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row">
+      <!-- Nyama Choma -->
+      <div class="col-lg-12">
+        <div class="row align-items-center my-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6">
+            <h3>Nyama Choma</h3>
+            <p class="fst-italic">Kenya's national dish of barbecued meat, usually goat or beef, cooked over an open flame.</p>
+            <p>This dish is perfect for social gatherings, served with kachumbari (tomato salad) and Ugali. A classic favorite in Kenyan cuisine.</p>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="{% static 'assets/img/nyama choma.jpg' %}" alt="Nyama Choma" class="img-fluid rounded shadow-lg glowing-img" data-aos="zoom-in" data-aos-delay="300">
+          </div>
+        </div>
+      </div>
+
+      <!-- Ugali -->
+      <div class="col-lg-12 mt-4">
+        <div class="row align-items-center my-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 order-lg-2">
+            <h3>Ugali</h3>
+            <p class="fst-italic">A staple food made from maize or other grains boiled into a thick dough-like consistency.</p>
+            <p>Ugali is often served as the base for various Kenyan dishes, accompanied by vegetables, stew, or meat. Simple, yet hearty!</p>
+          </div>
+          <div class="col-lg-6 text-center order-lg-1">
+            <img src="{% static 'assets/img/ugali.jpeg' %}" alt="Ugali" class="img-fluid rounded shadow-lg glowing-img" data-aos="zoom-in" data-aos-delay="300">
+          </div>
+        </div>
+      </div>
+
+      <!-- Matoke -->
+      <div class="col-lg-12 mt-4">
+        <div class="row align-items-center my-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6">
+            <h3>Matoke</h3>
+            <p class="fst-italic">A delicious stew made from green bananas, cooked with tomatoes, onions, garlic, and spices.</p>
+            <p>Matoke is often served with Ugali, rice, or chapati and pairs well with roasted meat or fried fish. It’s a popular home-cooked dish.</p>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="{% static 'assets/img/matoke.jpg' %}" alt="Matoke" class="img-fluid rounded shadow-lg glowing-img" data-aos="zoom-in" data-aos-delay="300">
+          </div>
+        </div>
+      </div>
+
+      <!-- Kenyan Pilau -->
+      <div class="col-lg-12 mt-4">
+        <div class="row align-items-center my-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 order-lg-2">
+            <h3>Kenyan Pilau</h3>
+            <p class="fst-italic">A fragrant rice dish cooked with a blend of aromatic spices, served with a side of fresh tomato and onion salad.</p>
+            <p>Kenyan Pilau is a festive dish, often served at special events and celebrations. It’s flavorful, filling, and perfect for a family meal.</p>
+          </div>
+          <div class="col-lg-6 text-center order-lg-1">
+            <img src="{% static 'assets/img/pilau.jpg' %}" alt="Kenyan Pilau" class="img-fluid rounded shadow-lg glowing-img" data-aos="zoom-in" data-aos-delay="300">
+          </div>
+        </div>
+      </div>
+
+      <!-- Kuku Paka -->
+      <div class="col-lg-12 mt-4">
+        <div class="row align-items-center my-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6">
+            <h3>Kuku Paka</h3>
+            <p class="fst-italic">A delicious chicken dish cooked in a rich and creamy coconut curry sauce.</p>
+            <p>Kuku Paka is a perfect combination of tender chicken and the richness of coconut milk, served with rice or Ugali. A coastal delicacy loved by many!</p>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="{% static 'assets/img/kuku paka.jpg' %}" alt="Kuku Paka" class="img-fluid rounded shadow-lg glowing-img" data-aos="zoom-in" data-aos-delay="300">
+          </div>
+        </div>
+      </div>
+
+      <!-- Ingoho (Fried Chicken) -->
+      <div class="col-lg-12 mt-4">
+        <div class="row align-items-center my-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 order-lg-2">
+            <h3>Ingoho</h3>
+            <p class="fst-italic">Fried chicken marinated with spices, garlic, ginger, and sometimes chili for a flavorful kick.</p>
+            <p>Ingoho is the perfect meal for chicken lovers, served with a side of Ugali or fried potatoes. A crispy, juicy treat!</p>
+          </div>
+          <div class="col-lg-6 text-center order-lg-1">
+            <img src="{% static 'assets/img/ingoho.jpeg' %}" alt="" class="img-fluid rounded shadow-lg glowing-img" data-aos="zoom-in" data-aos-delay="300">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Specials Section -->
+
+
+
+
+{% endblock %}

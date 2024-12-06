@@ -1,0 +1,82 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}<br><br><br><br><br>
+
+
+  <!-- Book A Table Section -->
+<section id="book-a-table" class="book-a-table section py-5">
+
+  <!-- Section Title -->
+  <div class="container section-title text-center mb-5" data-aos="fade-up">
+    <h2 class="fw-bold">Book A Room</h2><br><br>
+    <p class="text-muted">Reserve your place effortlessly and enjoy a delightful living  experience at Cana Delicacies.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container d-flex justify-content-center">
+    <div class="row g-0 rounded shadow-lg overflow-hidden" style="max-width: 900px;" data-aos="fade-up" data-aos-delay="100">
+
+      <!-- Reservation Image -->
+      <div class="col-lg-4 reservation-img" style="background-image: url({% static 'assets/img/cana favicon.jpg' %}); background-size: cover; background-position: center;"></div>
+
+      <!-- Reservation Form -->
+      <div class="col-lg-8 d-flex align-items-center bg-light p-4">
+        <form method="POST">
+          {% csrf_token %}
+          <style>
+            /* Add a yellow border and glow effect on focus */
+            .form-control:focus {
+              outline: none;
+              box-shadow: 0 0 5px rgba(255, 223, 0, 0.75); /* Yellow glow effect */
+              border-color: #FFDF00; /* Yellow border color */
+            }
+          </style>
+          <div class="row gy-3">
+
+            <!-- Name -->
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control rounded" id="name" placeholder="Your Name" required="">
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+              <input type="email" name="email" class="form-control rounded" id="email" placeholder="Your Email" required="">
+            </div>
+
+            <!-- Phone -->
+            <div class="col-md-6">
+              <input type="text" name="phone" class="form-control rounded" id="phone" placeholder="Your Phone" required="">
+            </div>
+
+            <!-- Date -->
+            <div class="col-md-6">
+              <input type="datetime-local" name="date" class="form-control rounded" id="date" placeholder="Date" required="">
+            </div>
+
+ <div class="col-md-6">
+              <select name="room" class="form-select rounded" id="room" required="">
+                <option value="" disabled selected>Select Room Type</option>
+                <option value="Deluxe Room">Deluxe Room</option>
+                <option value="Standard Room">Standard Room</option>
+                <option value="Single Room">Single Room</option>
+              </select>
+            </div>
+
+          <!-- Message -->
+          <div class="form-group mt-3">
+            <textarea class="form-control rounded" name="message" rows="3" placeholder="Special Requests (optional)"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-warning rounded-pill px-4 py-2">Complete Booking</button>
+          </div>
+        </form>
+      </div><!-- End Reservation Form -->
+
+    </div>
+  </div>
+
+</section><!-- End Book A Table Section -->
+
+
+{% endblock %}

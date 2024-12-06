@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Home</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+    {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/cana favicon.jpg' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-end justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-phone d-flex align-items-center d-none d-lg-block"><span>+254 723415680</span></i>
+          <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"><span>Mon-Sun: 8:00 AM - 22:00 PM</span></i>
+        </div>
+        <a href="{% url 'reservations' %}" class="cta-btn">Reserve Your Spot</a>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">Flavors from nature</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="{% url 'index' %}" class="active">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'menu' %}">Menu</a></li>
+            <li><a href="{% url 'specials' %}">Specials</a></li>
+            <li><a href="{% url 'events' %}">Events</a></li>
+            <li><a href="{% url 'image' %}">Our Chefs</a></li>
+            <li><a href="{% url 'rooms' %}">Rooms</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="{% static 'assets/img/hero-carousel/cana carousel 1.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2><span>Cana</span> Delicacies</h2>
+            <p>At Cana Delicacies, we serve tasty meals made from fresh ingredients. Come enjoy a cozy atmosphere with flavors that will make you happy. Whether for lunch or dinner, we have something special for you. Taste the love in every bite!</p>
+            <div>
+              <a href="{% url 'menu' %}" class="btn-get-started">Cana Delights</a>
+              <a href="{% url 'reservations' %}" class="btn-get-started">Reserve Your Spot</a>
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/hero-carousel/carousel 2.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2> Reserve Your Table Today</h2>
+            <p>Join us at Cana Delicacies for a wonderful dining experience! Reserve your table today and treat yourself to delicious meals made with fresh ingredients. Whether it’s lunch or dinner, we have something special waiting for you. Don’t wait too long—book now and get ready for a tasty time! We can’t wait to serve you.</p>
+            <div>
+              <a href="{% url 'menu' %}" class="btn-get-started">Cana Delights</a>
+              <a href="{% url 'reservations' %}" class="btn-get-started">Reserve Your Spot</a>
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/hero-carousel/carousel 3.jpg' %}" alt="">
+          <div class="carousel-container">
+            <h2>Refreshing Bliss in a Glass</h2>
+            <p> Enjoy our mixed fruit juice, made from a tasty blend of fresh fruits. Each sip is sweet and refreshing. It's the perfect drink to cool you down and give you energy. Treat yourself to this healthy and yummy juice today!</p>
+            <div>
+              <a href="{% url 'menu' %}" class="btn-get-started">Cana Delights</a>
+              <a href="{% url 'reservations' %}" class="btn-get-started">Reserve Your Spot</a>
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Choose Us</h2>
+        <div><span>What Makes</span> <span class="description-title">Us Special</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <span>01</span>
+              <h4><a href="" class="stretched-link">Fresh Ingredients</a></h4>
+              <p>We believe in using only the best ingredients. Our dishes are made with fresh, local produce and high-quality meats. You can taste the difference in every bite, knowing you’re eating healthy and flavorful food.</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <span>02</span>
+              <h4><a href="" class="stretched-link">Friendly Service</a></h4>
+              <p>Our staff is warm and welcoming. We are here to make your dining experience enjoyable. If you need help choosing a dish or have any questions, just ask! We want you to feel at home.</p>
+            </div>
+          </div><!-- Card Item -->
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <span>03</span>
+              <h4><a href="" class="stretched-link"> Perfect for Everyone</a></h4>
+              <p>Whether you’re dining alone, with family, or celebrating a special occasion, our restaurant is the right place. We cater to all kinds of gatherings, and our diverse menu means there’s something for everyone to enjoy.</p>
+            </div>
+          </div><!-- Card Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+
+
+
+
+    <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section dark-background" style="position: relative;">
+
+  <!-- Background Image -->
+  <img src="{% static 'assets/img/testimonials-bg.jpg' %}" class="testimonials-bg" alt="" style="width: 100%; height: auto; position: absolute; top: 0; left: 0; z-index: -1;">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <!-- Section Title -->
+    <div class="section-title text-center mb-4">
+      <h2 class="fw-bold text-white">What Our Clients Say</h2>
+      <p class="text-white-50" style="margin-top: 20px;">Our customers love what we do, and here’s what they have to say about us.</p>
+    </div>
+
+    <!-- Bootstrap Carousel -->
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Testimonial Item 1 -->
+        <div class="carousel-item active">
+          <div class="testimonial-item text-center p-4 bg-white shadow-sm rounded">
+            <img src="{% static 'assets/img/testimonials/keith luvonga.jpg' %}" class="testimonial-img rounded-circle mb-3" alt="" style="width: 120px; height: 120px; object-fit: cover;">
+            <h3 class="text-dark">Keith Luvonga</h3>
+            <h5 class="text-muted">CEO & Founder</h5>
+            <div class="stars mb-2">
+              <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <p class="testimonial-text text-dark">
+              <i class="bi bi-quote quote-icon-left text-primary"></i>
+              <span>"As the founder of Cana Delicacies, I’m proud to offer a unique dining experience where quality and flavor meet."</span>
+              <i class="bi bi-quote quote-icon-right text-primary"></i>
+            </p>
+          </div>
+        </div><!-- End Testimonial Item 1 -->
+
+        <!-- Testimonial Item 2 -->
+        <div class="carousel-item">
+          <div class="testimonial-item text-center p-4 bg-white shadow-sm rounded">
+            <img src="{% static 'assets/img/testimonials/debora naliaka.jpg' %}" class="testimonial-img rounded-circle mb-3" alt="" style="width: 120px; height: 120px; object-fit: cover;">
+            <h3 class="text-dark">Debora Naliaka</h3>
+            <h5 class="text-muted">Designer</h5>
+            <div class="stars mb-2">
+              <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <p class="testimonial-text text-dark">
+              <i class="bi bi-quote quote-icon-left text-primary"></i>
+              <span>Cana Delicacies is my new favorite restaurant! From the first bite to the last, every dish was delicious and satisfying."</span>
+              <i class="bi bi-quote quote-icon-right text-primary"></i>
+            </p>
+          </div>
+        </div><!-- End Testimonial Item 2 -->
+
+        <!-- Testimonial Item 3 -->
+        <div class="carousel-item">
+          <div class="testimonial-item text-center p-4 bg-white shadow-sm rounded">
+            <img src="{% static 'assets/img/testimonials/vincent koech.jpg' %}" class="testimonial-img rounded-circle mb-3" alt="" style="width: 120px; height: 120px; object-fit: cover;">
+            <h3 class="text-dark">Vincent Koech</h3>
+            <h5 class="text-muted">Store Owner</h5>
+            <div class="stars mb-2">
+              <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <p class="testimonial-text text-dark">
+              <i class="bi bi-quote quote-icon-left text-primary"></i>
+              <span>The food at Cana Delicacies exceeded my expectations! The flavors were fresh, and the service was top-notch."</span>
+              <i class="bi bi-quote quote-icon-right text-primary"></i>
+            </p>
+          </div>
+        </div><!-- End Testimonial Item 3 -->
+
+        <!-- Testimonial Item 4 -->
+        <div class="carousel-item">
+          <div class="testimonial-item text-center p-4 bg-white shadow-sm rounded">
+            <img src="{% static 'assets/img/testimonials/sandra chege.jpg' %}" class="testimonial-img rounded-circle mb-3" alt="" style="width: 120px; height: 120px; object-fit: cover;">
+            <h3 class="text-dark">Sandra Chege</h3>
+            <h5 class="text-muted">Freelancer</h5>
+            <div class="stars mb-2">
+              <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i>
+            </div>
+            <p class="testimonial-text text-dark">
+              <i class="bi bi-quote quote-icon-left text-primary"></i>
+              <span>"I had an incredible dining experience at Cana Delicacies. The ambiance, food, and hospitality made my day special!"</span>
+              <i class="bi bi-quote quote-icon-right text-primary"></i>
+            </p>
+          </div>
+        </div><!-- End Testimonial Item 4 -->
+
+      </div>
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- End Bootstrap Carousel -->
+
+  </div>
+
+</section><!-- End Testimonials Section -->
+
+
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div class="address">
+            <h4>Address</h4>
+            <p>Kapsabet,barnge'tuny Drive(Behind Easy Coach Offices),Saints Towers</p>
+            <p></p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contact</h4>
+            <p>
+              <strong>Phone:</strong> <span>+254723415680</span><br>
+              <strong>Email:</strong> <span>canadelicacies@gmail.com</span><br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              <strong>Mon-Sat:</strong> <span>8AM - 10PM</span><br>
+              <strong>Sunday</strong>: <span>Closed</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://web.facebook.com/p/CANA-Delicacies-100083598761580/?_rdc=1&_rdr" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Cana</span> <strong class="px-1 sitename">Delicacies.</strong> <span> All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Cana  <a href="https://web.facebook.com/p/CANA-Delicacies-100083598761580/?_rdc=1&_rdr">Delicacies @ 2024</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

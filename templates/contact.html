@@ -1,0 +1,93 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}<br><br><br><br><br>
+
+   <!-- Contact Section -->
+<section id="contact" class="contact section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <div><span>Locate Our </span> <span class="description-title">Contact Info</span></div>
+  </div><!-- End Section Title -->
+
+  <div class="mb-5">
+    <iframe style="width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d510685.2012920667!2d34.49986684163596!3d0.38523846370832204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1780671a124b0399%3A0x52f960d5df765f75!2sCana%20Delicacies!5e0!3m2!1sen!2ske!4v1733084456660!5m2!1sen!2ske" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div><!-- End Google Maps -->
+
+  <div class="container" data-aos="fade">
+    <div class="row gy-5 gx-lg-5">
+
+      <!-- Contact Information Section -->
+      <div class="col-lg-4">
+        <div class="info border rounded p-4 shadow-sm">
+          <h3 class="mb-4">Reach out to us</h3>
+          <p>"Get in touch with Cana Delicacies! We’re always eager to hear from you. Whether you have inquiries, feedback, or special requests, don’t hesitate to reach out. We’re here to ensure your experience is nothing short of exceptional!"</p>
+
+          <div class="info-item d-flex mb-3">
+            <i class="bi bi-geo-alt flex-shrink-0" style="font-size: 24px; color: orange;"></i>
+            <div class="ms-3">
+              <h4>Location:</h4>
+              <p>Kapsabet, Barnge'tuny Drive (Behind Easy Coach Offices), Saints Towers</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex mb-3">
+            <i class="bi bi-envelope flex-shrink-0" style="font-size: 24px; color: orange"></i>
+            <div class="ms-3">
+              <h4>Email:</h4>
+              <p>canadelicacies@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex mb-3">
+            <i class="bi bi-phone flex-shrink-0" style="font-size: 24px; color: orange;"></i>
+            <div class="ms-3">
+              <h4>Call:</h4>
+              <p>+254 723415680</p>
+            </div>
+          </div><!-- End Info Item -->
+        </div>
+      </div><!-- End Contact Info Section -->
+
+      <!-- Contact Form Section -->
+      <div class="col-lg-8">
+        <form  method="POST" >
+            {% csrf_token %}
+          <div class="row">
+            <!-- First Name -->
+            <div class="col-md-6 form-group">
+              <input type="text" name="first_name" class="form-control rounded" id="first_name" placeholder="First Name" required="">
+            </div>
+
+            <!-- Last Name -->
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="text" name="last_name" class="form-control rounded" id="last_name" placeholder="Last Name" required="">
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group mt-3">
+            <input type="email" class="form-control rounded" name="email" id="email" placeholder="Your Email" required="">
+          </div>
+
+          <!-- Message -->
+          <div class="form-group mt-3">
+            <textarea class="form-control rounded" name="message" placeholder="Your Message" required=""></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="my-3 text-center">
+            <button type="submit" class="btn btn-warning rounded px-4 py-2">Send Message</button>
+          </div>
+        </form>
+      </div><!-- End Contact Form Section -->
+
+    </div><!-- End Row -->
+  </div><!-- End Container -->
+</section><!-- End Contact Section -->
+
+
+
+
+{% endblock %}

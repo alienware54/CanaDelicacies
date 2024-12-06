@@ -1,0 +1,17 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}<br><br><br><br><br>
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+  <div class="thank-you-card text-center p-4 bg-white shadow rounded">
+    <h1 class="mb-3" style="color: #FFD700;">Thank You! 😊</h1>
+    <p>Your reservation has been successfully received. We're excited to serve you at Cana Delicacies!</p>
+    <!-- Button to make another reservation -->
+    <a href="{% url 'reservations' %}" class="btn btn-warning rounded-pill mt-3">Make Another Reservation</a>
+
+    <!-- Button to go to the payment page -->
+    <a href="{% url 'show' %}" class="btn btn-success rounded-pill mt-3 ml-3">Proceed to Payment</a>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}<br><br><br><br><br>
+
+
+<main class="container mt-5">
+    <section id="rooms" class="mb-5">
+        <h2 class="text-center mb-4"><span style="color: orange;">Available Rooms</span></h2>
+        <div class="row">
+            <!-- Room 1 -->
+            <div class="col-md-4">
+                <div class="card room-card">
+                    <img src="{% static 'assets/img/deluxe room.jpg' %}" class="card-img-top" alt="Deluxe Room">
+                    <div class="card-body">
+                        <h5 class="card-title">Deluxe Room</h5>
+                        <p class="card-text">Spacious and elegant, perfect for relaxation. <strong>KSH 15,000/night</strong>.</p>
+                       <a href="{% url 'reservations' %}" class="cta-btn btn btn-orange">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="col-md-4">
+                <div class="card room-card">
+                    <img src="{% static 'assets/img/standard room.jpg' %}" class="card-img-top" alt="Standard Room">
+                    <div class="card-body">
+                        <h5 class="card-title">Standard Room</h5>
+                        <p class="card-text">Affordable and cozy with modern amenities. <strong>KSH 8,000/night</strong>.</p>
+                        <a href="{% url 'reservations' %}" class="cta-btn btn btn-orange">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="col-md-4">
+                <div class="card room-card">
+                    <img src="{% static 'assets/img/single room.jpg' %}" class="card-img-top" alt="Suite">
+                    <div class="card-body">
+                        <h5 class="card-title">Single Room</h5>
+                        <p class="card-text">Experience unmatched luxury and privacy. <strong>KSH 25,000/night</strong>.</p>
+                        <a href="{% url 'reservations' %}" class="cta-btn btn btn-orange">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+    /* Orange Theme Styling */
+    .btn-orange {
+        background-color: orange;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+    }
+
+    .btn-orange:hover {
+        background-color: darkorange;
+        color: white;
+    }
+
+    .card-title, .card-text {
+        color: #333;
+    }
+
+    .room-card img {
+        height: 200px;
+        object-fit: cover;
+    }
+</style>
+
+<script>
+    function bookRoom(roomType) {
+        const roomDropdown = document.getElementById("room");
+        roomDropdown.value = roomType;
+        document.getElementById("name").focus();
+        window.scrollTo(0, document.getElementById("booking").offsetTop);
+    }
+</script>
+    <br><br><br><br>
+
+
+{% endblock %}
